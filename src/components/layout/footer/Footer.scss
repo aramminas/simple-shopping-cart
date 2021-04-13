@@ -1,0 +1,27 @@
+footer {
+  font-family: cursive;
+}
+
+.footer-box {
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.footer-svg {
+  margin: 0 5px;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  animation: rotating 7s linear infinite;
+}

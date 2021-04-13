@@ -1,0 +1,16 @@
+.welcome-content {
+  margin: 25px 0;
+  & p {
+    color: #848484;
+  }
+
+  & p.h1 {
+    color: #131313;
+    font-weight: 600;
+  }
+}
+
+.hr-short {
+  border-top: 2px solid rgb(0 0 0 / 43%);
+  width: 300px;
+}

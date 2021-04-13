@@ -1,0 +1,28 @@
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.logo-link img {
+  width: 100px;
+}
+
+.container-header {
+  max-width: 960px!important;
+}
+
+.site-header a {
+  color: #fff;
+  transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+.cart-baggage-link {
+  & i {
+    color: #ff9800;
+  }
+}

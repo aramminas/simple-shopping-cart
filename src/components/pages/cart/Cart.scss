@@ -1,0 +1,152 @@
+.shopping-cart{
+  padding-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+
+  & > div {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.shopping-cart .summary{
+  background-color: #f7fbff;
+  height: 100%;
+  padding: 30px;
+  width: 340px;
+}
+
+.shopping-cart .summary h3{
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shopping-cart .summary .summary-item:not(:last-of-type){
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shopping-cart .summary .text{
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.shopping-cart .summary .price{
+  font-size: 1em;
+  float: right;
+}
+
+.shopping-cart .summary button{
+  margin-top: 20px;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #939393bd;
+
+  & span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  & .close-cart:hover {
+    cursor: pointer;
+
+    & i {
+      color: #909192;
+    }
+  }
+}
+
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #75757563;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  & span {
+    margin-left: 8px;
+    font-weight: 600;
+    font-size: 19px;
+    font-family: inherit;
+    color: #757575;
+  }
+}
+
+/* Cart item */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #939393bd;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  & .cart-item-img img {
+    width: 100px;
+    max-height: 100px;
+  }
+
+  & .cart-item-desc {
+    max-width: 70px;
+    overflow: hidden;
+  }
+
+  & .cart-item-desc, & .cart-item-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  & .cart-item-desc-name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  & .cart-item-desc-model {
+    font-size: 15px;
+    color: #848484;
+  }
+
+  & .cart-item-desc-count #count {
+    width: 65px;
+  }
+
+  & .cart-item-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 27px;
+    width: 27px;
+    background-color: #93939338;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.7s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #909192;
+      & span i {
+        color: red;
+      }
+    }
+  }
+}
+
+/* Thank you */
+.thanks-you-content {
+  & img {
+    width: 300px;
+  }
+}
+
+
