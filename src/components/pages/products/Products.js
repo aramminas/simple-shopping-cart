@@ -36,6 +36,9 @@ function Products(props){
                 });
         }else {
             setProducts(allProducts);
+            setEmpty( prevState => {
+                return {...prevState, state: false}
+            });
         }
     }, []);
 
