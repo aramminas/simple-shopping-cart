@@ -1,6 +1,7 @@
 import Header from "./components/layout/header/Header";
 import Footer from "./components/layout/footer/Footer";
-import Routes from "./Routes";
+
+import Cart from "./components/pages/cart/Cart";
 
 import "./scss/font-awesome.scss";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -11,7 +12,7 @@ function App() {
         <div className="App">
             <Header/>
             <div id="container">
-                <Routes/>
+                <Cart/>
             </div>
             <Footer/>
         </div>

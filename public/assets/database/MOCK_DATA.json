@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Stim",
+    "price": "$1.91",
+    "color": "#b967f3",
+    "image": "https://robohash.org/solutasuntdoloremque.png?size=150x149&set=set1",
+    "quantity": 10
+  },
+  {
+    "id": 2,
+    "name": "Greenlam",
+    "price": "$6.76",
+    "color": "#fd1fcd",
+    "image": "https://robohash.org/consecteturutdolorem.png?size=150x149&set=set1",
+    "quantity": 10
+  },
+  {
+    "id": 3,
+    "name": "Rank",
+    "price": "$8.72",
+    "color": "#a15183",
+    "image": "https://robohash.org/cumqueethic.png?size=150x149&set=set1",
+    "quantity": 3
+  },
+  {
+    "id": 4,
+    "name": "Tresom",
+    "price": "$4.35",
+    "color": "#dcde35",
+    "image": "https://robohash.org/asperioresomnisest.png?size=150x149&set=set1",
+    "quantity": 4
+  },
+  {
+    "id": 5,
+    "name": "Stim",
+    "price": "$7.11",
+    "color": "#426b43",
+    "image": "https://robohash.org/etvoluptasaccusantium.png?size=150x149&set=set1",
+    "quantity": 5
+  },
+  {
+    "id": 6,
+    "name": "Otcom",
+    "price": "$7.82",
+    "color": "#5516d4",
+    "image": "https://robohash.org/odioveritatisnumquam.png?size=150x149&set=set1",
+    "quantity": 1
+  },
+  {
+    "id": 7,
+    "name": "Ventosanzap",
+    "price": "$4.55",
+    "color": "#046e0e",
+    "image": "https://robohash.org/assumendaquodmolestiae.png?size=150x149&set=set1",
+    "quantity": 10
+  },
+  {
+    "id": 8,
+    "name": "Y-find",
+    "price": "$4.99",
+    "color": "#6404e3",
+    "image": "https://robohash.org/consequaturmolestiaenobis.png?size=150x149&set=set1",
+    "quantity": 3
+  },
+  {
+    "id": 9,
+    "name": "Rank",
+    "price": "$4.95",
+    "color": "#f523db",
+    "image": "https://robohash.org/placeatenimiste.png?size=150x149&set=set1",
+    "quantity": 7
+  },
+  {
+    "id": 10,
+    "name": "Sonsing",
+    "price": "$0.04",
+    "color": "#9fd6d3",
+    "image": "https://robohash.org/laborumdoloraut.png?size=150x149&set=set1",
+    "quantity": 1
+  }
+]

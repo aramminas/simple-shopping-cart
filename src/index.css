@@ -17,6 +17,10 @@ html, body {
     margin: 0;
 }
 
+.vh-100 {
+    height: 100vh;
+}
+
 .App {
     display: flex;
     flex-flow: column;
@@ -34,4 +38,27 @@ html, body {
 
 .App #footer {
     flex: 0 1 auto;
+}
+
+
+.others-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.loader-title, .empty-title {
+    font-size: 23px;
+    padding-top: 16px;
+    font-weight: 700;
+    font-family: cursive;
+    color: #045c6b;
+}
+
+.empty-icon {
+    font-size: 50px;
+    color: #045c6b;
+    font-family: initial;
 }
