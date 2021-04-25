@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+/* context */
+import ItemsContext from "../../../context/ItemsContext";
 /* components */
 import LoaderContent from "../../others/loader/LoaderContent";
 import EmptyResult from "../../others/emptyResult/EmptyResult";
@@ -7,6 +9,7 @@ import CartHeader from "../cartHeader/CartHeader";
 import CartFooter from "../cartFooter/CartFooter";
 import CartItem from "../cartItem/CartItem";
 import EmptyCart from "../emptyCart/EmptyCart";
+import ThankYou from "../thankYou/ThankYou";
 
 /* styles */
 import "./Cart.scss";
@@ -16,6 +19,7 @@ const Cart = () => {
     const [subtotal, setSubtotal] = useState(0);
     const [loader, setLoader] = useState(true);
     const [empty, setEmpty] = useState(false);
+    const [isOrdered, setIsOrdered] = useState(false);
 
     useEffect(() => {
         axios.get(`/assets/database/MOCK_DATA.json`)
@@ -30,7 +34,7 @@ const Cart = () => {
                         setEmpty(true);
                         setLoader(false);
                     }
-                }, 3);
+                }, 3000);
             })
     }, []);
 
@@ -60,6 +64,10 @@ const Cart = () => {
         });
     }
 
+    const toOrder = () => {
+        setIsOrdered(true);
+    }
+
     /* Loader view */
     if(loader){
         return <LoaderContent/>;
@@ -70,6 +78,11 @@ const Cart = () => {
         return <EmptyResult/>
     }
 
+    /* Thank you view */
+    if(isOrdered){
+        return <ThankYou count={data.length} subtotal={subtotal}/>
+    }
+
     /* Main Cart view */
     return (
         <div className="container">
@@ -77,11 +90,13 @@ const Cart = () => {
                 <CartHeader/>
                 { data.length
                     ?
-                    <CartItem items={data} changeQuantity={changeQuantity} removeProduct={removeProduct}/>
+                    <ItemsContext.Provider value={{changeQuantity, removeProduct}}>
+                        <CartItem items={data}/>
+                    </ItemsContext.Provider>
                     :
                     <EmptyCart />
                 }
-                <CartFooter subtotal={subtotal}/>
+                <CartFooter subtotal={subtotal} toOrder={toOrder}/>
             </div>
         </div>
     );

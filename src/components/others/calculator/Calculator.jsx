@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
+/* contexts */
+import ItemsContext from "../../../context/ItemsContext";
 
-const Calculator = ({id, quantity, changeQuantity}) => {
+const Calculator = ({id, quantity}) => {
     const maxCount = 99;
     const [count, setCount] = useState(1);
+    const {changeQuantity} = useContext(ItemsContext);
 
     useEffect(() => {
         setCount(quantity);

@@ -1,8 +1,13 @@
+import {useContext} from "react";
+/* components */
 import Calculator from "../../others/calculator/Calculator";
+/* contexts */
+import ItemsContext from "../../../context/ItemsContext";
+/* default values */
 const defaultImage = "/assets/images/default-thumbnail.jpg";
 
-const CartItemList = ({data, changeQuantity, removeProduct}) => {
-    const {id, name, price, quantity, color, image} = data;
+const CartItemList = ({data: {id, name, price, quantity, color, image}}) => {
+    const {removeProduct} = useContext(ItemsContext);
 
     return (
         <div className="cart-item-list">
@@ -12,11 +17,7 @@ const CartItemList = ({data, changeQuantity, removeProduct}) => {
             <div className="cart-details">
                 <div className="cart-item-name">{name}</div>
                 <div className="cart-item-info" style={{backgroundColor: color}}/>
-                <Calculator
-                    id={id}
-                    quantity={quantity}
-                    changeQuantity={changeQuantity}
-                />
+                <Calculator id={id} quantity={quantity}/>
             </div>
             <div className="cart-item-price-content">
                 <div className="cart-item-delete" onClick={() => removeProduct(id)}>
