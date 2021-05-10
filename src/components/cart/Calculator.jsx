@@ -1,31 +1,49 @@
 import React, {useState, useEffect, useContext} from "react";
 /* contexts */
-import ItemsContext from "../../../store/context/ItemsContext";
+import CartContext from "../../store/context/cartContext";
+import {
+    INCREASE_THE_QUANTITY,
+    DECREASE_THE_QUANTITY,
+    SET_THE_QUANTITY
+} from "../../constants";
 
 const Calculator = ({id, quantity}) => {
     const maxCount = 99;
     const [count, setCount] = useState(1);
-    const {changeQuantity} = useContext(ItemsContext);
+    const {dispatchCart} = useContext(CartContext);
 
     useEffect(() => {
         setCount(quantity);
     }, [quantity]);
 
     const handleIncreaseProduct = () => {
-        changeQuantity(id, count + 1);
+        if(count < maxCount){
+            dispatchCart({
+                type: INCREASE_THE_QUANTITY,
+                payload: {id, count: count +1}
+            });
+            setCount( count +1);
+        }
     }
 
     const handleDecreaseProduct = () => {
         if(count > 1){
-            changeQuantity(id, count - 1);
+            dispatchCart({
+                type: DECREASE_THE_QUANTITY,
+                payload: {id, count: count -1}
+            });
+            setCount( count -1);
         }
     }
 
     const handleOnChange = (e) => {
         const val = e.target.value;
-        if(val >= 0 && val < maxCount){
-            setCount(() => val);
-            changeQuantity(id, val);
+        if(val >= 0 && val <= maxCount){
+            dispatchCart({
+                type: SET_THE_QUANTITY,
+                payload: {id, count: val}
+            });
+            setCount( val);
         }
     }
 

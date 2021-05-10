@@ -26,3 +26,25 @@
     color: #ff9800;
   }
 }
+
+.cart-link {
+  position: relative;
+
+  & .cart-baggage {
+    margin: auto;
+    min-width: 8px;
+    border-radius: 13px;
+    background-color: #c9002c;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: -17px;
+    top: 4px;
+    z-index: 2;
+    font: bold 11px Arial;
+    color: #fff;
+    padding: 2px 4px;
+    border: 1px solid #afafaf;
+  }
+}
+

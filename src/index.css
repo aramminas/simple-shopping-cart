@@ -21,6 +21,10 @@ html, body {
     height: 100vh;
 }
 
+.vh-50 {
+    height: 50vh;
+}
+
 .App {
     display: flex;
     flex-flow: column;
@@ -61,4 +65,12 @@ html, body {
     font-size: 50px;
     color: #045c6b;
     font-family: initial;
+}
+
+/* ERROR part */
+.critical-error-content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }

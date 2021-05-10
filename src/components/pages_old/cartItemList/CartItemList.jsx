@@ -2,7 +2,7 @@ import {useContext} from "react";
 /* components */
 import Calculator from "../../others/calculator/Calculator";
 /* contexts */
-import ItemsContext from "../../../context/ItemsContext";
+import ItemsContext from "../../../store/context/ItemsContext";
 /* default values */
 const defaultImage = "/assets/images/default-thumbnail.jpg";
 

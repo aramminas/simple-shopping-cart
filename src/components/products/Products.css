@@ -1,0 +1,17 @@
+.products-content {
+  margin: 35px auto;
+}
+
+.image-box {
+  min-height: 335px;
+  border-bottom: 1px solid #dadada;
+  display: flex;
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=Products.css.map */

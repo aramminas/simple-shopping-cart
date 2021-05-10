@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 /* context */
-import ItemsContext from "../../../context/ItemsContext";
+import ItemsContext from "../../../store/context/ItemsContext";
 /* components */
+import LayoutWrapper from "../../layout/LayoutWrapper";
 import LoaderContent from "../../others/loader/LoaderContent";
 import EmptyResult from "../../others/emptyResult/EmptyResult";
 import CartHeader from "../cartHeader/CartHeader";
@@ -102,4 +103,4 @@ const Cart = () => {
     );
 }
 
-export default Cart;
+export default LayoutWrapper(Cart);

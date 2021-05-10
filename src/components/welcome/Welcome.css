@@ -1,0 +1,44 @@
+.welcome-content {
+  margin: 50px auto;
+}
+.welcome-content p {
+  color: #848484;
+}
+.welcome-content p.h1 {
+  color: #131313;
+  font-weight: 600;
+}
+
+.hr-short {
+  border-top: 2px solid rgba(0, 0, 0, 0.43);
+  width: 300px;
+}
+
+/* Top Products */
+.top-products {
+  margin-bottom: 100px;
+}
+.top-products .slick-prev:before, .top-products .slick-next:before {
+  color: #131313;
+}
+.top-products img.slider-image {
+  width: 100%;
+  max-height: 275px;
+}
+
+div.welcome-card {
+  border-radius: 0;
+}
+div.welcome-card .card-img-top.slider-image {
+  border-radius: 0;
+}
+
+.prod-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #000;
+  text-shadow: 1px 0 1px #ccc, 0 1px 1px #eee, 2px 1px 1px #ccc, 1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc, 3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc, 5px 6px 1px #eee, 7px 6px 1px #ccc;
+}
+
+/*# sourceMappingURL=Welcome.css.map */

@@ -12,7 +12,7 @@ const ThankYou = ({count, subtotal}) => {
                     </figure>
                     <div className="thank-you-info">
                         <span>You have ordered <span className="thank-you-mark">{count}</span> {count > 1 ? "types of products." : "type of product."} </span>
-                        <span>Your order is <span className="thank-you-mark">$ {subtotal.toFixed(2)}</span>.</span>
+                        <span>Your order is <span className="thank-you-mark">${subtotal.toFixed(2)}</span>.</span>
                     </div>
                 </div>
             </div>
